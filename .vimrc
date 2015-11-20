@@ -31,12 +31,6 @@
 
 " }}}
 
-" Use before config if available {{{
-    if filereadable(expand("~/.vimrc.before"))
-        source ~/.vimrc.before
-    endif
-" }}}
-
 " Use bundles config {{{
     if filereadable(expand("~/.vimrc.bundles"))
         source ~/.vimrc.bundles
@@ -1020,24 +1014,4 @@
 
     execute "noremap " . s:spf13_edit_config_mapping " :call <SID>EditSpf13Config()<CR>"
     execute "noremap " . s:spf13_apply_config_mapping . " :source ~/.vimrc<CR>"
-" }}}
-
-" Use fork vimrc if available {{{
-    if filereadable(expand("~/.vimrc.fork"))
-        source ~/.vimrc.fork
-    endif
-" }}}
-
-" Use local vimrc if available {{{
-    if filereadable(expand("~/.vimrc.local"))
-        source ~/.vimrc.local
-    endif
-" }}}
-
-" Use local gvimrc if available and gui is running {{{
-    if has('gui_running')
-        if filereadable(expand("~/.gvimrc.local"))
-            source ~/.gvimrc.local
-        endif
-    endif
 " }}}
