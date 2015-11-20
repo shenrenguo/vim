@@ -56,27 +56,10 @@
         Bundle 'gmarik/vundle'
         Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
-        if executable('ag')
-            Bundle 'mileszs/ack.vim'
-            let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
-        elseif executable('ack-grep')
-            let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-            Bundle 'mileszs/ack.vim'
-        elseif executable('ack')
-            Bundle 'mileszs/ack.vim'
-        endif
+        Bundle 'mileszs/ack.vim'
     " }}}
 
-    " In your .vimrc.before.local file
-    " list only the plugin groups you will use
-    if !exists('g:spf13_bundle_groups')
-        let g:spf13_bundle_groups=['general', 'neocomplete', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
-    endif
-
-    " To override all the included bundles, add the following to your
-    " .vimrc.bundles.local file:
-    "   let g:override_spf13_bundles = 1
-    if !exists("g:override_spf13_bundles")
+    let g:spf13_bundle_groups=['general', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
 
     " General {{{
         if count(g:spf13_bundle_groups, 'general')
@@ -90,18 +73,11 @@
             Bundle 'scrooloose/nerdtree'
             Bundle 'jistr/vim-nerdtree-tabs'
             Bundle 'mbbill/undotree'
+            Bundle 'vim-scripts/matchit.zip'
             Bundle 'tpope/vim-surround'
-            Bundle 'tpope/vim-repeat'
             Bundle 'jiangmiao/auto-pairs'
-            Bundle 'matchit.zip'
+            Bundle 'tpope/vim-repeat'
             Bundle 'nathanaelkane/vim-indent-guides'
-            if !exists('g:spf13_no_views')
-                Bundle 'vim-scripts/restore_view.vim'
-            endif
-            Bundle 'mhinz/vim-signify'
-            Bundle 'tpope/vim-abolish.git'
-            Bundle 'osyo-manga/vim-over'
-            Bundle 'gcmt/wildfire.vim'
         endif
     " }}}
 
@@ -247,7 +223,5 @@
             Bundle 'saltstack/salt-vim'
         endif
     " }}}
-
-    endif
 
 " }}}

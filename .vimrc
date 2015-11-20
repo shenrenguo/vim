@@ -320,6 +320,14 @@
 
 " Plugins {{{
 
+    " ack.vim {{{
+        if executable('ag')
+            let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
+        elseif executable('ack-grep')
+            let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+        endif
+    " }}}
+
     " vim-airline {{{
         if isdirectory(expand("~/.vim/bundle/vim-airline/"))
             let g:airline_theme = 'solarized'
@@ -375,7 +383,30 @@
             let NERDTreeMouseMode=2
             let NERDTreeShowHidden=1
             let NERDTreeKeepTreeInNewTab=1
+            let g:NERDShutUp=1
             let g:nerdtree_tabs_open_on_gui_startup=0
+        endif
+    " }}}
+
+    " UndoTree {{{
+        if isdirectory(expand("~/.vim/bundle/undotree/"))
+            nnoremap <Leader>u :UndotreeToggle<CR>
+            " If undotree is opened, it is likely one wants to interact with it.
+            let g:undotree_SetFocusWhenToggle=1
+        endif
+    " }}}
+
+    " Matchit {{{
+        if isdirectory(expand("~/.vim/bundle/matchit.zip"))
+            let b:match_ignorecase = 1
+        endif
+    " }}}
+
+    " indent_guides {{{
+        if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
+            let g:indent_guides_start_level = 2
+            let g:indent_guides_guide_size = 1
+            let g:indent_guides_enable_on_vim_startup = 1
         endif
     " }}}
 
@@ -386,14 +417,6 @@
         endif
     " }}}
 
-    " Misc {{{
-        if isdirectory(expand("~/.vim/bundle/nerdtree"))
-            let g:NERDShutUp=1
-        endif
-        if isdirectory(expand("~/.vim/bundle/matchit.zip"))
-            let b:match_ignorecase = 1
-        endif
-    " }}}
 
     " OmniComplete {{{
         " To disable omni complete, add the following to your .vimrc.before.local file:
@@ -820,21 +843,7 @@
         autocmd BufWritePost *.hs GhcModCheckAndLintAsync
     endif
 
-    " UndoTree {{{
-        if isdirectory(expand("~/.vim/bundle/undotree/"))
-            nnoremap <Leader>u :UndotreeToggle<CR>
-            " If undotree is opened, it is likely one wants to interact with it.
-            let g:undotree_SetFocusWhenToggle=1
-        endif
-    " }}}
 
-    " indent_guides {{{
-        if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
-            let g:indent_guides_start_level = 2
-            let g:indent_guides_guide_size = 1
-            let g:indent_guides_enable_on_vim_startup = 1
-        endif
-    " }}}
 
     " Wildfire {{{
     let g:wildfire_objects = {
