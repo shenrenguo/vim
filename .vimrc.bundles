@@ -81,7 +81,7 @@
         endif
     " }}}
 
-    " General Programming {{{
+    "Programming {{{
         if count(g:spf13_bundle_groups, 'programming')
             " Pick one of the checksyntax, jslint, or syntastic
             Bundle 'scrooloose/syntastic'

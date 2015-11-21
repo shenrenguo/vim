@@ -135,7 +135,7 @@
 
 " Vim UI {{{
 
-    if !exists('g:override_spf13_bundles') && filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
+    if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
         let g:solarized_termcolors=256
         let g:solarized_termtrans=1
         let g:solarized_contrast="normal"
@@ -165,9 +165,7 @@
         " Broken down into easily includeable segments
         set statusline=%<%f\                     " Filename
         set statusline+=%w%h%m%r                 " Options
-        if !exists('g:override_spf13_bundles')
-            set statusline+=%{fugitive#statusline()} " Git Hotness
-        endif
+        set statusline+=%{fugitive#statusline()} " Git Hotness
         set statusline+=\ [%{&ff}/%Y]            " Filetype
         set statusline+=\ [%{getcwd()}]          " Current dir
         set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
@@ -417,7 +415,6 @@
         endif
     " }}}
 
-
     " OmniComplete {{{
         " To disable omni complete, add the following to your .vimrc.before.local file:
         "   let g:spf13_no_omni_complete = 1
@@ -471,7 +468,6 @@
         let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
     " }}}
 
-
     " Tabularize {{{
         if isdirectory(expand("~/.vim/bundle/tabular"))
             nmap <Leader>a& :Tabularize /&<CR>
@@ -517,7 +513,6 @@
             nnoremap <silent> <leader>tt :TagbarToggle<CR>
         endif
     "}}}
-
 
     " Fugitive {{{
         if isdirectory(expand("~/.vim/bundle/vim-fugitive/"))
@@ -692,6 +687,7 @@
             let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
             let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
     " }}}
+
     " neocomplcache {{{
         elseif count(g:spf13_bundle_groups, 'neocomplcache')
             let g:acp_enableAtStartup = 0
@@ -792,6 +788,7 @@
             let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
             let g:neocomplcache_omni_patterns.go = '\h\w*\.\?'
     " }}}
+
     " Normal Vim omni-completion {{{
     " To disable omni complete, add the following to your .vimrc.before.local file:
     "   let g:spf13_no_omni_complete = 1
@@ -842,15 +839,6 @@
     if !executable("ghcmod")
         autocmd BufWritePost *.hs GhcModCheckAndLintAsync
     endif
-
-
-
-    " Wildfire {{{
-    let g:wildfire_objects = {
-                \ "*" : ["i'", 'i"', "i)", "i]", "i}", "ip"],
-                \ "html,xml" : ["at"],
-                \ }
-    " }}}
 
 " }}}
 
