@@ -84,9 +84,8 @@
 
     "Programming {{{
         if count(g:spf13_bundle_groups, 'programming')
-            Bundle 'lukaszkorecki/CoffeeTags'
-            Bundle 'xolox/vim-easytags'
             Bundle 'majutsushi/tagbar'
+            Bundle 'xolox/vim-easytags'
             Bundle 'scrooloose/syntastic'
             Bundle 'Valloric/YouCompleteMe'
             Bundle 'SirVer/ultisnips'
@@ -103,6 +102,7 @@
         if count(g:spf13_bundle_groups, 'html')
             Bundle 'amirh/HTML-AutoCloseTag'
             Bundle 'hail2u/vim-css3-syntax'
+            Bundle 'groenewege/vim-less'
             Bundle 'gorodinskiy/vim-coloresque'
             Bundle 'tpope/vim-haml'
         endif
@@ -110,8 +110,9 @@
 
     " Javascript {{{
         if count(g:spf13_bundle_groups, 'javascript')
+            Bundle 'ternjs/tern_for_vim'
+            Bundle 'lukaszkorecki/CoffeeTags'
             Bundle 'elzr/vim-json'
-            Bundle 'groenewege/vim-less'
             Bundle 'pangloss/vim-javascript'
             Bundle 'briancollins/vim-jst'
             Bundle 'kchmck/vim-coffee-script'
