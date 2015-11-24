@@ -84,6 +84,7 @@
 
     "Programming {{{
         if count(g:spf13_bundle_groups, 'programming')
+            Bundle 'lukaszkorecki/CoffeeTags'
             Bundle 'xolox/vim-easytags'
             Bundle 'majutsushi/tagbar'
             Bundle 'scrooloose/syntastic'

@@ -421,6 +421,75 @@
     " TagBar {{{
         if isdirectory(expand("~/.vim/bundle/tagbar/"))
             nnoremap <silent> <leader>tt :TagbarToggle<CR>
+
+            " css
+            let g:tagbar_type_css = {
+            \ 'ctagstype' : 'Css',
+                \ 'kinds'     : [
+                    \ 'c:classes',
+                    \ 's:selectors',
+                    \ 'i:identities'
+                \ ]
+            \ }
+            
+            " elixir
+            let g:tagbar_type_elixir = {
+                \ 'ctagstype' : 'elixir',
+                \ 'kinds' : [
+                    \ 'f:functions',
+                    \ 'functions:functions',
+                    \ 'c:callbacks',
+                    \ 'd:delegates',
+                    \ 'e:exceptions',
+                    \ 'i:implementations',
+                    \ 'a:macros',
+                    \ 'o:operators',
+                    \ 'm:modules',
+                    \ 'p:protocols',
+                    \ 'r:records'
+                \ ]
+            \ }
+
+            " go
+            let g:tagbar_type_go = {
+                \ 'ctagstype' : 'go',
+                \ 'kinds'     : [
+                    \ 'p:package',
+                    \ 'i:imports:1',
+                    \ 'c:constants',
+                    \ 'v:variables',
+                    \ 't:types',
+                    \ 'n:interfaces',
+                    \ 'w:fields',
+                    \ 'e:embedded',
+                    \ 'm:methods',
+                    \ 'r:constructor',
+                    \ 'f:functions'
+                \ ],
+                \ 'sro' : '.',
+                \ 'kind2scope' : {
+                    \ 't' : 'ctype',
+                    \ 'n' : 'ntype'
+                \ },
+                \ 'scope2kind' : {
+                    \ 'ctype' : 't',
+                    \ 'ntype' : 'n'
+                \ },
+                \ 'ctagsbin'  : 'gotags',
+                \ 'ctagsargs' : '-sort -silent'
+            \ }
+
+            " Groovy
+            let g:tagbar_type_groovy = {
+                \ 'ctagstype' : 'groovy',
+                \ 'kinds'     : [
+                    \ 'p:package',
+                    \ 'c:class',
+                    \ 'i:interface',
+                    \ 'f:function',
+                    \ 'v:variables',
+                \ ]
+            \ }
         endif
     "}}}
 
