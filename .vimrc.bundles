@@ -57,7 +57,6 @@
         Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
         Bundle 'mileszs/ack.vim'
-        Bundle 'xolox/vim-misc'
     " }}}
 
     let g:spf13_bundle_groups=['general', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
@@ -85,7 +84,6 @@
     "Programming {{{
         if count(g:spf13_bundle_groups, 'programming')
             Bundle 'majutsushi/tagbar'
-            Bundle 'xolox/vim-easytags'
             Bundle 'scrooloose/syntastic'
             Bundle 'Valloric/YouCompleteMe'
             Bundle 'SirVer/ultisnips'

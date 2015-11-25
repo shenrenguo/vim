@@ -495,6 +495,186 @@
                 \ }
             "}}}
 
+            " Markdown {{{
+                let g:tagbar_type_markdown = {
+                    \ 'ctagstype' : 'markdown',
+                    \ 'kinds' : [
+                        \ 'h:Heading_L1',
+                        \ 'i:Heading_L2',
+                        \ 'k:Heading_L3'
+                    \ ]
+                \ }
+            "}}}
+
+            " Object-C {{{
+                let g:tagbar_type_objc = {
+                    \ 'ctagstype' : 'ObjectiveC',
+                    \ 'kinds'     : [
+                        \ 'i:interface',
+                        \ 'I:implementation',
+                        \ 'p:Protocol',
+                        \ 'm:Object_method',
+                        \ 'c:Class_method',
+                        \ 'v:Global_variable',
+                        \ 'F:Object field',
+                        \ 'f:function',
+                        \ 'p:property',
+                        \ 't:type_alias',
+                        \ 's:type_structure',
+                        \ 'e:enumeration',
+                        \ 'M:preprocessor_macro',
+                    \ ],
+                    \ 'sro'        : ' ',
+                    \ 'kind2scope' : {
+                        \ 'i' : 'interface',
+                        \ 'I' : 'implementation',
+                        \ 'p' : 'Protocol',
+                        \ 's' : 'type_structure',
+                        \ 'e' : 'enumeration'
+                    \ },
+                    \ 'scope2kind' : {
+                        \ 'interface'      : 'i',
+                        \ 'implementation' : 'I',
+                        \ 'Protocol'       : 'p',
+                        \ 'type_structure' : 's',
+                        \ 'enumeration'    : 'e'
+                    \ }
+                \ }
+            "}}}
+
+            "Puppet {{{
+                let g:tagbar_type_puppet = {
+                    \ 'ctagstype': 'puppet',
+                    \ 'kinds': [
+                        \'c:class',
+                        \'s:site',
+                        \'n:node',
+                        \'d:definition'
+                    \]
+                \}
+            "}}}
+
+            "R {{{
+                let g:tagbar_type_r = {
+                    \ 'ctagstype' : 'r',
+                    \ 'kinds'     : [
+                        \ 'f:Functions',
+                        \ 'g:GlobalVariables',
+                        \ 'v:FunctionVariables',
+                    \ ]
+                \ }
+            "}}}
+
+            "Ruby {{{
+                let g:tagbar_type_ruby = {
+                    \ 'kinds' : [
+                        \ 'm:modules',
+                        \ 'c:classes',
+                        \ 'd:describes',
+                        \ 'C:contexts',
+                        \ 'f:methods',
+                        \ 'F:singleton methods'
+                    \ ]
+                \ }
+            "}}}
+
+            "Rust {{{
+                let g:tagbar_type_rust = {
+                    \ 'ctagstype' : 'rust',
+                    \ 'kinds' : [
+                        \'T:types,type definitions',
+                        \'f:functions,function definitions',
+                        \'g:enum,enumeration names',
+                        \'s:structure names',
+                        \'m:modules,module names',
+                        \'c:consts,static constants',
+                        \'t:traits,traits',
+                        \'i:impls,trait implementations',
+                    \]
+                \}
+            "}}}
+
+            "Scala {{{
+                let g:tagbar_type_scala = {
+                    \ 'ctagstype' : 'scala',
+                    \ 'sro'       : '.',
+                    \ 'kinds'     : [
+                      \ 'p:packages',
+                      \ 'T:types:1',
+                      \ 't:traits',
+                      \ 'o:objects',
+                      \ 'O:case objects',
+                      \ 'c:classes',
+                      \ 'C:case classes',
+                      \ 'm:methods',
+                      \ 'V:values:1',
+                      \ 'v:variables:1'
+                    \ ]
+                \ }
+            "}}}
+
+            "TypeScript {{{
+                let g:tagbar_type_typescript = {
+                  \ 'ctagstype': 'typescript',
+                  \ 'kinds': [
+                    \ 'c:classes',
+                    \ 'n:modules',
+                    \ 'f:functions',
+                    \ 'v:variables',
+                    \ 'v:varlambdas',
+                    \ 'm:members',
+                    \ 'i:interfaces',
+                    \ 'e:enums',
+                  \ ]
+                \ }
+            "}}}
+
+            "WSDL {{{
+                let g:tagbar_type_xml = {
+                    \ 'ctagstype' : 'WSDL',
+                    \ 'kinds'     : [
+                        \ 'n:namespaces',
+                        \ 'm:messages',
+                        \ 'p:portType',
+                        \ 'o:operations',
+                        \ 'b:bindings',
+                        \ 's:service'
+                    \ ]
+                \ }
+            "}}}
+
+            "Xquery {{{
+                let g:tagbar_type_xquery = {
+                    \ 'ctagstype' : 'xquery',
+                    \ 'kinds'     : [
+                        \ 'f:function',
+                        \ 'v:variable',
+                        \ 'm:module',
+                    \ ]
+                \ }
+            "}}}
+
+            "XSD {{{
+                let g:tagbar_type_xsd = {
+                    \ 'ctagstype' : 'XSD',
+                    \ 'kinds'     : [
+                        \ 'e:elements',
+                        \ 'c:complexTypes',
+                        \ 's:simpleTypes'
+                    \ ]
+                \ }
+            "}}}
+
+            "XSLT {{{
+                let g:tagbar_type_xslt = {
+                  \ 'ctagstype' : 'xslt',
+                  \ 'kinds' : [
+                    \ 'v:variables',
+                    \ 't:templates'
+                  \ ]
+                \}
+            "}}}
+
         endif
     "}}}
 
