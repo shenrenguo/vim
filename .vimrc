@@ -736,6 +736,10 @@
             let g:syntastic_auto_loc_list = 1
             let g:syntastic_check_on_open = 1
             let g:syntastic_check_on_wq = 0
+
+            let g:syntastic_html_checkers = ['tidy']
+            let g:syntastic_jade_checkers = ['jade_lint']
+            let g:syntastic_javascript_checkers = ['eslint']
         endif
     " }}}
 
