@@ -59,10 +59,10 @@
         Bundle 'mileszs/ack.vim'
     " }}}
 
-    let g:spf13_bundle_groups=['general', 'programming', 'php', 'ruby', 'python', 'javascript', 'html&css', 'misc',]
+    let g:bundle_groups=['general', 'programming',  'html&css', 'javascript', 'php',  'python', 'ruby', 'go', 'scala', 'haskell', 'puppet', 'elixir', 'rust', 'toml', 'markdown', ]
 
     " General {{{
-        if count(g:spf13_bundle_groups, 'general')
+        if count(g:bundle_groups, 'general')
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'spf13/vim-colors'
             Bundle 'flazz/vim-colorschemes'
@@ -82,7 +82,7 @@
     " }}}
 
     "Programming {{{
-        if count(g:spf13_bundle_groups, 'programming')
+        if count(g:bundle_groups, 'programming')
             Bundle 'majutsushi/tagbar'
             Bundle 'scrooloose/syntastic'
             Bundle 'Valloric/YouCompleteMe'
@@ -97,28 +97,28 @@
     " }}}
 
     " HTML & CSS {{{
-        if count(g:spf13_bundle_groups, 'html&css')
+        if count(g:bundle_groups, 'html&css')
             Bundle 'amirh/HTML-AutoCloseTag'
             Bundle 'hail2u/vim-css3-syntax'
+            Bundle 'skammer/vim-css-color'
             Bundle 'groenewege/vim-less'
-            Bundle 'gorodinskiy/vim-coloresque'
             Bundle 'tpope/vim-haml'
         endif
     " }}}
 
     " Javascript {{{
-        if count(g:spf13_bundle_groups, 'javascript')
-            Bundle 'ternjs/tern_for_vim'
+        if count(g:bundle_groups, 'javascript')
             Bundle 'pangloss/vim-javascript'
             Bundle 'kchmck/vim-coffee-script'
-            Bundle 'lukaszkorecki/CoffeeTags'
             Bundle 'elzr/vim-json'
             Bundle 'briancollins/vim-jst'
+            Bundle 'ternjs/tern_for_vim'
+            Bundle 'lukaszkorecki/CoffeeTags'
         endif
     " }}}
 
     " PHP {{{
-        if count(g:spf13_bundle_groups, 'php')
+        if count(g:bundle_groups, 'php')
             Bundle 'spf13/PIV'
             Bundle 'arnaud-lb/vim-php-namespace'
             Bundle 'beyondwords/vim-twig'
@@ -126,8 +126,7 @@
     " }}}
 
     " Python {{{
-        if count(g:spf13_bundle_groups, 'python')
-            " Pick either python-mode or pyflakes & pydoc
+        if count(g:bundle_groups, 'python')
             Bundle 'klen/python-mode'
             Bundle 'yssource/python.vim'
             Bundle 'python_match.vim'
@@ -136,22 +135,20 @@
     " }}}
 
     " Ruby {{{
-        if count(g:spf13_bundle_groups, 'ruby')
+        if count(g:bundle_groups, 'ruby')
             Bundle 'tpope/vim-rails'
             let g:rubycomplete_buffer_loading = 1
-            "let g:rubycomplete_classes_in_global = 1
-            "let g:rubycomplete_rails = 1
         endif
     " }}}
 
     " Go Lang {{{
-        if count(g:spf13_bundle_groups, 'go')
+        if count(g:bundle_groups, 'go')
             Bundle 'fatih/vim-go'
         endif
     " }}}
 
     " Scala {{{
-        if count(g:spf13_bundle_groups, 'scala')
+        if count(g:bundle_groups, 'scala')
             Bundle 'derekwyatt/vim-scala'
             Bundle 'derekwyatt/vim-sbt'
             Bundle 'xptemplate'
@@ -159,7 +156,7 @@
     " }}}
 
     " Haskell {{{
-        if count(g:spf13_bundle_groups, 'haskell')
+        if count(g:bundle_groups, 'haskell')
             Bundle 'eagletmt/ghcmod-vim'
             Bundle 'travitch/hasksyn'
             Bundle 'dag/vim2hs'
@@ -174,28 +171,35 @@
     " }}}
 
     " Puppet {{{
-        if count(g:spf13_bundle_groups, 'puppet')
+        if count(g:bundle_groups, 'puppet')
             Bundle 'rodjek/vim-puppet'
         endif
     " }}}
 
     " Elixir {{{
-        if count(g:spf13_bundle_groups, 'elixir')
+        if count(g:bundle_groups, 'elixir')
             Bundle 'elixir-lang/vim-elixir'
             Bundle 'carlosgaldino/elixir-snippets'
             Bundle 'mattreduce/vim-mix'
         endif
     " }}}
 
-    " Misc {{{
-        if count(g:spf13_bundle_groups, 'misc')
+    " rust {{{
+        if count(g:bundle_groups, 'rust')
             Bundle 'rust-lang/rust.vim'
+        endif
+    " }}}
+
+    " TOML {{{
+        if count(g:bundle_groups, 'toml')
+            Bundle 'cespare/vim-toml'
+        endif
+    " }}}
+
+    " Markdown {{{
+        if count(g:bundle_groups, 'markdown')
             Bundle 'tpope/vim-markdown'
             Bundle 'spf13/vim-preview'
-            Bundle 'tpope/vim-cucumber'
-            Bundle 'cespare/vim-toml'
-            Bundle 'quentindecock/vim-cucumber-align-pipes'
-            Bundle 'saltstack/salt-vim'
         endif
     " }}}
 
