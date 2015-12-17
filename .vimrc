@@ -40,6 +40,8 @@
 " General {{{
 
     set background=dark         " Assume a dark background
+    colorscheme base16-default
+    let base16colorspace=256
 
     filetype plugin indent on   " Automatically detect file types.
     syntax on                   " Syntax highlighting
@@ -105,14 +107,6 @@
 " }}}
 
 " Vim UI {{{
-
-    if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-        let g:solarized_termcolors=256
-        let g:solarized_termtrans=1
-        let g:solarized_contrast="normal"
-        let g:solarized_visibility="normal"
-        color solarized             " Load a colorscheme
-    endif
 
     set tabpagemax=15               " Only show 15 tabs
     set showmode                    " Display the current mode
@@ -239,7 +233,7 @@
 
     " vim-airline {{{
         if isdirectory(expand("~/.vim/bundle/vim-airline/"))
-            let g:airline_theme = 'solarized'
+            let g:airline_theme = 'base16'
             let g:airline#extensions#tabline#enabled = 1
             let g:airline_powerline_fonts = 1
         endif
